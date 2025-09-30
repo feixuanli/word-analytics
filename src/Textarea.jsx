@@ -5,6 +5,7 @@ import Warning from './Warning';
 export default function Textarea() {
     const [text, setText] = useState("");
     const [warningtext, setWarningtext] = useState('');
+    const numberOfCharacters = text.length;
 
     const handleChange = (e) => {
         let newText = e.target.value;
