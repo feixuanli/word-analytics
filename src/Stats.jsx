@@ -9,13 +9,17 @@ const Stat = ({value, label}) => {
     )
 }
 
-export default function Stats() {
+export default function Stats({
+  numberOfCharacters, 
+  instaCharactersLeft, 
+  fbCharactersLeft,
+  numberOfWords}) {
   return (
     <section className="stats">
-        <Stat value={0} label="words"/>
-        <Stat value={0} label="characters"/>
-        <Stat value={280} label="instagram"/>
-        <Stat value={2200} label="facebook"/>
+        <Stat value={numberOfWords} label="words"/>
+        <Stat value={numberOfCharacters} label="characters"/>
+        <Stat value={instaCharactersLeft} label="instagram"/>
+        <Stat value={fbCharactersLeft} label="facebook"/>
     </section>
   )
 }
