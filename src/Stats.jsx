@@ -10,11 +10,10 @@ const Stat = ({value, label}) => {
 }
 
 export default function Stats({
-  numberOfCharacters, 
-  instaCharactersLeft, 
-  fbCharactersLeft,
-  numberOfWords}) {
-  return (
+  stats}) {
+  const {numberOfWords, numberOfCharacters, instaCharactersLeft, fbCharactersLeft} = stats;
+  
+   return (
     <section className="stats">
         <Stat value={numberOfWords} label="words"/>
         <Stat value={numberOfCharacters} label="characters"/>

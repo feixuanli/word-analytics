@@ -10,14 +10,17 @@ export default function Container() {
   const fbCharactersLeft = 2200 - text.length;
   const numberOfWords = text.split(/\s/).filter(word => word !=="").length;
 
+  const stats = {
+    numberOfCharacters, 
+    instaCharactersLeft,
+    fbCharactersLeft,
+    numberOfWords,
+  }
   return (
     <main className="container">
         <Textarea text={text} setText={setText}/>
         <Stats 
-          numberOfCharacters={numberOfCharacters} 
-          instaCharactersLeft={instaCharactersLeft} 
-          fbCharactersLeft={fbCharactersLeft}
-          numberOfWords={numberOfWords}
+          stats={stats}
         />
     </main>
   )
