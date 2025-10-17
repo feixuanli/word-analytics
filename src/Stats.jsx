@@ -3,7 +3,7 @@ import React from "react";
 const Stat = ({value, label}) => {
     return (
         <section className="stat">
-            <span className="stat__number">{value}</span>
+            <span className={`stat__number ${value < 0? "stat__number--limit":""}`}>{value}</span>
             <h2 className="second-heading">{label}</h2>
         </section>
     )
